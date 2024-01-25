@@ -1,13 +1,10 @@
 import styles from "./page.module.css";
-import MainHome from "@/components/home/MainHome";
+import HomeC from "@/components/home/HomeC";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <MainHome />
-    
-      
-      
+      <HomeC />
     </main>
   );
 }
