@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image"
+import Script from 'next/script'
 
 function HomeC() {
   const date = new Date().getFullYear()
@@ -869,7 +870,7 @@ function HomeC() {
           </li>
 
           <li>
-            <a href="#" className="footer-link">FAQ's</a>
+            <a href="#" className="footer-link">FAQ&apos;s</a>
           </li>
 
           <li>
@@ -973,8 +974,8 @@ function HomeC() {
   <script src="/js/script.js" defer></script>
 
 
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <Script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></Script>
+  <Script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></Script>
 
 </div>
   )
