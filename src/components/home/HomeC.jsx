@@ -4,6 +4,7 @@ import Script from 'next/script'
 import Card from '../Card'
 import styles from "./HomeC.module.scss"
 import {FaPhone} from "react-icons/fa"
+import CategoryCard from './CategoryCard'
 
 function HomeC() {
   const date = new Date().getFullYear()
@@ -176,89 +177,8 @@ break barriers and excel in the exciting world of technology
 
           <ul className="grid-list">
 
-            <li>
-              <div className="category-card" style={{background: "hsla(170, 75%, 41%, .1)"}}>
+            <CategoryCard />
 
-                <div className="card-icon">
-                  <Image src="/images/category-1.svg" width="40" height="40" loading="lazy"
-                    alt="Online Degree Programs" className="img" />
-                </div>
-
-                <h3 className="h3">
-                  <a href="#" className="card-title">Online Degree Programs</a>
-                </h3>
-
-                <p className="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                </p>
-
-                <span className="card-badge">7 Courses</span>
-
-              </div>
-            </li>
-
-            <li>
-              <div className="category-card" style={{background: "hsla(351, 83%, 61%, .1)"}}>
-
-                <div className="card-icon">
-                  <Image src="/images/category-2.svg" width="40" height="40" loading="lazy"
-                    alt="Non-Degree Programs" className="img" />
-                </div>
-
-                <h3 className="h3">
-                  <a href="#" className="card-title">Non-Degree Programs</a>
-                </h3>
-
-                <p className="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                </p>
-
-                <span className="card-badge">4 Courses</span>
-
-              </div>
-            </li>
-
-            <li>
-              <div className="category-card" style={{background: "hsla(229, 75%, 58%, .1)"}}>
-
-                <div className="card-icon">
-                  <Image src="/images/category-3.svg" width="40" height="40" loading="lazy"
-                    alt="Off-Campus Programs" className="img" />
-                </div>
-
-                <h3 className="h3">
-                  <a href="#" className="card-title">Off-Campus Programs</a>
-                </h3>
-
-                <p className="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                </p>
-
-                <span className="card-badge">8 Courses</span>
-
-              </div>
-            </li>
-
-            <li>
-              <div className="category-card" style={{background: "hsla(42, 94%, 55%, .1)"}}>
-
-                <div className="card-icon">
-                  <Image src="/images/category-4.svg" width="40" height="40" loading="lazy"
-                    alt="Hybrid Distance Programs" className="img" />
-                </div>
-
-                <h3 className="h3">
-                  <a href="#" className="card-title">Hybrid Distance Programs</a>
-                </h3>
-
-                <p className="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                </p>
-
-                <span className="card-badge">8 Courses</span>
-
-              </div>
-            </li>
 
           </ul>
 
