@@ -1,6 +1,9 @@
 import React from 'react'
 import Image from "next/image"
 import Script from 'next/script'
+import Card from '../Card'
+import styles from "./HomeC.module.scss"
+import {FaPhone} from "react-icons/fa"
 
 function HomeC() {
   const date = new Date().getFullYear()
@@ -108,8 +111,9 @@ function HomeC() {
               The Best Program to <span className="span">Enroll</span> for Exchange
             </h1>
 
-            <p className="hero-text">
-              Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.
+            <p className="hero-text" style={{paddingLeft:0}}>
+            Welcome to Fatima Code Academy, where we believe in empowering Young girls to
+break barriers and excel in the exciting world of technology
             </p>
 
             <a href="#" className="btn has-before">
@@ -123,14 +127,24 @@ function HomeC() {
           <figure className="hero-banner">
 
             <div className="img-holder one" style={{width: "auto", height: 300}}>
-              <Image src="/images/hero-banner-1.jpg" width="270" height="300" alt="hero banner" className="img-cover" />
+              <Image src="/images/hero-banner-1.jpg" width="2700" height="3000" alt="hero banner" className="img-cover" />
             </div>
 
             <div className="img-holder two" style={{width: "auto", height: 370}}>
-              <Image src="/images/hero-banner-2.jpg" width="240" height="370" alt="hero banner" className="img-cover" />
+              <Image src="/images/hero-banner-2.jpg" width="2400" height="3700" alt="hero banner" className="img-cover" />
             </div>
 
-            <Image src="/images/hero-shape-1.svg" width="380" height="190" alt="" className="shape hero-shape-1" />
+            {/* Number container */}
+            {/* <Image src="/images/hero-shape-1.svg" width="380" height="190" alt="" className="shape hero-shape-1" /> */}
+            <div className={styles.numberCont}>
+                  <div className={styles.numberContLeft}>
+                  <FaPhone  className={styles.icon}/>
+                  </div>
+                  <div className={styles.numberContRight}>
+                    <h4>ONLINE SUPPORT</h4>
+                    <h1>+230 (542) 98741</h1>
+                  </div>
+            </div>
 
             <Image src="/images/hero-shape-2.png" width="622" height="551" alt="" className="shape hero-shape-2" />
 
@@ -285,13 +299,19 @@ function HomeC() {
             <p className="section-subtitle">About Us</p>
 
             <h2 className="h2 section-title">
-              Over 10 Years in <span className="span">Distant learning</span> for Skill Development
+              <span className="span">Distant learning</span> for Skill Development
             </h2>
 
             <p className="section-text">
-              Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod ex tempor incididunt labore dolore magna
-              aliquaenim ad
-              minim.
+            Fatima Code Academy is a pioneering educational program dedicated to empowering girls aged
+14-17, particularly those facing socio-economic challenges. Our mission is to break through barriers
+early in their academic journey and provide a transformative pathway to success in the dynamic field
+of technology. This initiative aspires to provide dignified employment opportunities and aims to do
+this at the post high school level. <br/>
+At the heart of our approach at Fatima Code Academy, we are harnessing teaching resources from
+current tech students in universities and recent graduates. This unique give-back ecosystem not only
+allows these teenage girls to develop crucial skills but also fosters a community where knowledge is
+shared for the common good.
             </p>
 
             <ul className="about-list">
@@ -341,182 +361,8 @@ function HomeC() {
 
           <ul className="grid-list">
 
-            <li>
-              <div className="course-card">
-
-                <figure className="card-banner img-holder" style={{width: "100%", height: 220}}>
-                  <Image src="/images/course-1.jpg" width="370" height="220" loading="lazy"
-                    alt="Build Responsive Real- World Websites with HTML and CSS" className="img-cover" />
-                </figure>
-
-                <div className="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span className="span">3 Weeks</span>
-                </div>
-
-                <div className="card-content">
-
-                  <span className="badge">Beginner</span>
-
-                  <h3 className="h3">
-                    <a href="#" className="card-title">Build Responsive Real- World Websites with HTML and CSS</a>
-                  </h3>
-
-                  <div className="wrapper">
-
-                    <div className="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p className="rating-text">(5.0/7 Rating)</p>
-
-                  </div>
-
-                  <data className="price" value="29">$29.00</data>
-
-                  <ul className="card-meta-list">
-
-                    <li className="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">8 Lessons</span>
-                    </li>
-
-                    <li className="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">20 Students</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div className="course-card">
-
-                <figure className="card-banner img-holder" style={{width: "100%", height: 220}}>
-                  <Image src="/images/course-2.jpg" width="370" height="220" loading="lazy"
-                    alt="Java Programming Masterclass for Software Developers" className="img-cover" />
-                </figure>
-
-                <div className="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span className="span">8 Weeks</span>
-                </div>
-
-                <div className="card-content">
-
-                  <span className="badge">Advanced</span>
-
-                  <h3 className="h3">
-                    <a href="#" className="card-title">Java Programming Masterclass for Software Developers</a>
-                  </h3>
-
-                  <div className="wrapper">
-
-                    <div className="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p className="rating-text">(4.5 /9 Rating)</p>
-
-                  </div>
-
-                  <data className="price" value="49">$49.00</data>
-
-                  <ul className="card-meta-list">
-
-                    <li className="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">15 Lessons</span>
-                    </li>
-
-                    <li className="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">35 Students</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div className="course-card">
-
-                <figure className="card-banner img-holder" style={{width: "100%", height: 220}}>
-                  <Image src="/images/course-3.jpg" width="370" height="220" loading="lazy"
-                    alt="The Complete Camtasia Course for Content Creators" className="img-cover" />
-                </figure>
-
-                <div className="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span className="span">3 Weeks</span>
-                </div>
-
-                <div className="card-content">
-
-                  <span className="badge">Intermediate</span>
-
-                  <h3 className="h3">
-                    <a href="#" className="card-title">The Complete Camtasia Course for Content Creators</a>
-                  </h3>
-
-                  <div className="wrapper">
-
-                    <div className="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p className="rating-text">(4.9 /7 Rating)</p>
-
-                  </div>
-
-                  <data className="price" value="35">$35.00</data>
-
-                  <ul className="card-meta-list">
-
-                    <li className="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">13 Lessons</span>
-                    </li>
-
-                    <li className="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">18 Students</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li>
+           
+            <Card />
 
           </ul>
 
@@ -627,7 +473,7 @@ function HomeC() {
 
           <p className="section-subtitle">Latest Articles</p>
 
-          <h2 className="h2 section-title">Get News With Eduweb</h2>
+          <h2 className="h2 section-title">Updates and Newsletters from Fatima Code Academy</h2>
 
           <ul className="grid-list">
 
@@ -803,18 +649,18 @@ function HomeC() {
           <div className="wrapper">
             <span className="span">Add:</span>
 
-            <address className="address">70-80 Upper St Norwich NR2</address>
+            <address className="address">: Beau Plan Business Park, Beau Plan, Mauritius</address>
           </div>
 
           <div className="wrapper">
             <span className="span">Call:</span>
-            <a href="tel:+011234567890" className="footer-link">+01 123 4567 890</a>
+            <a href="tel:+230 54298741" className="footer-link">+230 (542) 98741</a>
           </div>
 
           <div className="wrapper">
             <span className="span">Email:</span>
 
-            <a href="mailto:info@eduweb.com" className="footer-link">info@eduweb.com</a>
+            <a href="mailto:info@fatima-codeacademy" className="footer-link">info@fatima-codeacademy</a>
           </div>
 
         </div>
@@ -910,7 +756,7 @@ function HomeC() {
             </li>
 
             <li>
-              <a href="#" className="social-link">
+              <a href="https://www.linkedin.com/company/101487594/admin/feed/posts/" className="social-link" >
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>

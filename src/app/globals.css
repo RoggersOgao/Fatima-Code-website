@@ -207,6 +207,7 @@ body {
 
 .container {
   padding-inline: 15px;
+  position:relative;
 }
 
 .section {
@@ -491,7 +492,7 @@ body {
   margin-block: 18px 20px;
   white-space: break-spaces;
   width: 90%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   margin-bottom: 3rem;
 }
 
@@ -1117,6 +1118,7 @@ body {
     max-width: 520px;
     width: 100%;
     margin-inline: auto;
+    position:relative;
   }
 
   .grid-list {
