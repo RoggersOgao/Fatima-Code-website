@@ -35,7 +35,7 @@ function CategoryCard() {
   return (
 <>
     {items.map((item,index)=>(
-        <li style={{background: item.background}}>
+        <li style={{background: item.background}} key={index}>
         <div className="category-card">
     
           <div className="card-icon">
