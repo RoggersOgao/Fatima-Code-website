@@ -563,7 +563,7 @@ shared for the common good.
           </a>
 
           <p className="footer-brand-text">
-            Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
+          The Best Program to Enroll for Exchange
           </p>
 
           <div className="wrapper">
