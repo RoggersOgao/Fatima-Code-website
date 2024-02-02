@@ -278,7 +278,7 @@ break barriers and excel in the exciting world of technology
 
           <figure className="about-banner">
 
-            <div className="img-holder" style={{width: 520, height: 370}}>
+            <div className="img-holder" style={{ height: 370}}>
               <Image src="/images/about-banner.jpg" width="520" height="370" loading="lazy" alt="about banner"
                 className="img-cover" />
             </div>

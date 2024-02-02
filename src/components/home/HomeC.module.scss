@@ -14,7 +14,9 @@
     animation: bounce 2.5s infinite;
 
     @media only screen and (max-width:600px){
-      display:none;
+      width:25rem;
+      overflow:hidden;
+      padding:1.5rem .5rem;
     }
 
     &Left {
@@ -40,6 +42,9 @@
             font-size: 2.4rem;
             font-weight: 300;
             color: var(--radical-red);
+            @media only screen and (max-width:600px){
+              font-size:1.6rem;
+            }
         }
     }
 }
