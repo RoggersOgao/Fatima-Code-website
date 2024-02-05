@@ -1,7 +1,7 @@
 import { League_Spartan } from "next/font/google";
 import "./globals.css";
 
-const leagueSpartan = League_Spartan({ subsets: ["latin"] });
+const leagueSpatan = League_Spartan({ subsets: ["latin"], display: 'swap', adjustFontFallback: false });
 
 export const metadata = {
   title: "Fatima Code",
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={leagueSpartan.className}>
+      <body className={leagueSpatan.className}>
           {children}
       </body>
     </html>

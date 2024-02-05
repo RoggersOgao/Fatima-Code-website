@@ -5,9 +5,19 @@ import Card from '../Card'
 import styles from "./HomeC.module.scss"
 import {FaPhone} from "react-icons/fa"
 import CategoryCard from './CategoryCard'
+import { urlForImage } from '../../../sanity/lib/image'
+import BlogCard from './BlogCard'
 
-function HomeC() {
+
+const formatPhoneNumber = (originalNumber) => {
+  const formattedNumber = originalNumber.replace(/(\+\d{3})(\d{3})(\d{4})/, '$1 ($2) $3');
+  return formattedNumber;
+};
+function HomeC({heroData, categoryData, aboutUs, courses, posts}) {
   const date = new Date().getFullYear()
+  let originalNumber = heroData.phone;
+  const formattedNumber = formatPhoneNumber(originalNumber);
+
   return (
     <div id="top">
 
@@ -110,11 +120,11 @@ function HomeC() {
 
             <h1 className="h1 section-title">
               The Best Program to <span className="span">Enroll</span> for Exchange
+              {/* {heroData.title} */}
             </h1>
 
             <p className="hero-text" style={{paddingLeft:0}}>
-            Welcome to Fatima Code Academy, where we believe in empowering Young girls to
-break barriers and excel in the exciting world of technology
+            {heroData.description}
             </p>
 
             <a href="#" className="btn has-before">
@@ -128,11 +138,11 @@ break barriers and excel in the exciting world of technology
           <figure className="hero-banner">
 
             <div className="img-holder one" style={{width: "auto", height: 300}}>
-              <Image src="/images/hero-banner-1.jpg" width="2700" height="3000" alt="hero banner" className="img-cover" />
+              <Image src={urlForImage(heroData.firstImage)} width="2700" height="3000" alt="hero banner" className="img-cover" />
             </div>
 
             <div className="img-holder two" style={{width: "auto", height: 370}}>
-              <Image src="/images/hero-banner-2.jpg" width="2400" height="3700" alt="hero banner" className="img-cover" />
+              <Image src={urlForImage(heroData.secondImage)} width="2400" height="3700" alt="hero banner" className="img-cover" />
             </div>
 
             {/* Number container */}
@@ -143,7 +153,7 @@ break barriers and excel in the exciting world of technology
                   </div>
                   <div className={styles.numberContRight}>
                     <h4>ONLINE SUPPORT</h4>
-                    <h1>+230 (542) 98741</h1>
+                    <h1>{formattedNumber}</h1>
                   </div>
             </div>
 
@@ -177,7 +187,7 @@ break barriers and excel in the exciting world of technology
 
           <ul className="grid-list">
 
-            <CategoryCard />
+            <CategoryCard category={categoryData}/>
 
 
           </ul>
@@ -199,7 +209,7 @@ break barriers and excel in the exciting world of technology
           <figure className="about-banner">
 
             <div className="img-holder" style={{ height: 370}}>
-              <Image src="/images/about-banner.jpg" width="520" height="370" loading="lazy" alt="about banner"
+              <Image src={urlForImage(aboutUs.mainImage)} width="520" height="370" loading="lazy" alt="about banner"
                 className="img-cover" />
             </div>
 
@@ -223,15 +233,7 @@ break barriers and excel in the exciting world of technology
             </h2>
 
             <p className="section-text">
-            Fatima Code Academy is a pioneering educational program dedicated to empowering girls aged
-14-17, particularly those facing socio-economic challenges. Our mission is to break through barriers
-early in their academic journey and provide a transformative pathway to success in the dynamic field
-of technology. This initiative aspires to provide dignified employment opportunities and aims to do
-this at the post high school level. <br/>
-At the heart of our approach at Fatima Code Academy, we are harnessing teaching resources from
-current tech students in universities and recent graduates. This unique give-back ecosystem not only
-allows these teenage girls to develop crucial skills but also fosters a community where knowledge is
-shared for the common good.
+           {aboutUs.description}
             </p>
 
             <ul className="about-list">
@@ -282,7 +284,7 @@ shared for the common good.
           <ul className="grid-list">
 
            
-            <Card />
+            <Card courses={courses}/>
 
           </ul>
 
@@ -396,142 +398,7 @@ shared for the common good.
           <h2 className="h2 section-title">Updates and Newsletters from Fatima Code Academy</h2>
 
           <ul className="grid-list">
-
-            <li>
-              <div className="blog-card">
-
-                <figure className="card-banner img-holder has-after" style={{width: "100%", height: 370}}>
-                  <Image src="/images/blog-1.jpg" width="370" height="370" loading="lazy"
-                    alt="Become A Better Blogger: Content Planning" className="img-cover" />
-                </figure>
-
-                <div className="card-content">
-
-                  <a href="#" className="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                  <a href="#" className="card-subtitle">Online</a>
-
-                  <h3 className="h3">
-                    <a href="#" className="card-title">Become A Better Blogger: Content Planning</a>
-                  </h3>
-
-                  <ul className="card-meta-list">
-
-                    <li className="card-meta-item">
-                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">Oct 10, 2021</span>
-                    </li>
-
-                    <li className="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">Com 09</span>
-                    </li>
-
-                  </ul>
-
-                  <p className="card-text">
-                    Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div className="blog-card">
-
-                <figure className="card-banner img-holder has-after" style={{width: "100%", height: 370}}>
-                  <Image src="/images/blog-2.jpg" width="370" height="370" loading="lazy"
-                    alt="Become A Better Blogger: Content Planning" className="img-cover" />
-                </figure>
-
-                <div className="card-content">
-
-                  <a href="#" className="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                  <a href="#" className="card-subtitle">Online</a>
-
-                  <h3 className="h3">
-                    <a href="#" className="card-title">Become A Better Blogger: Content Planning</a>
-                  </h3>
-
-                  <ul className="card-meta-list">
-
-                    <li className="card-meta-item">
-                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">Oct 10, 2021</span>
-                    </li>
-
-                    <li className="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">Com 09</span>
-                    </li>
-
-                  </ul>
-
-                  <p className="card-text">
-                    Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div className="blog-card">
-
-                <figure className="card-banner img-holder has-after" style={{width: "100%", height: 370}}>
-                  <Image src="/images/blog-3.jpg" width="370" height="370" loading="lazy"
-                    alt="Become A Better Blogger: Content Planning" className="img-cover" />
-                </figure>
-
-                <div className="card-content">
-
-                  <a href="#" className="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                  <a href="#" className="card-subtitle">Online</a>
-
-                  <h3 className="h3">
-                    <a href="#" className="card-title">Become A Better Blogger: Content Planning</a>
-                  </h3>
-
-                  <ul className="card-meta-list">
-
-                    <li className="card-meta-item">
-                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">Oct 10, 2021</span>
-                    </li>
-
-                    <li className="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
-
-                      <span className="span">Com 09</span>
-                    </li>
-
-                  </ul>
-
-                  <p className="card-text">
-                    Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
+          <BlogCard posts={posts}/>
           </ul>
 
           <Image src="/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""

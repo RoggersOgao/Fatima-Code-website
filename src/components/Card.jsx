@@ -1,74 +1,23 @@
 import React from 'react'
 import Image from "next/image"
+import { urlForImage } from '../../sanity/lib/image'
 
-function Card() {
+function Card({courses}) {
 
-    const Items = [
-        {
-            level: "Beginner",
-            title: "Web Design",
-            img:"course-1",
-            rating: 5.0,
-            price: 29.00,
-            lessons: 8,
-            students: 20,
-            weeks: 4
-        },
-        {
-            level: "Beginner",
-            title: "Python Basics",
-            img:"course-2",
-            rating: 4.8,
-            price: 52.00,
-            lessons: 15,
-            students: 24,
-            weeks: 6
-        },
-        {
-            level: "Intermediate",
-            title: "Javascript Basics",
-            img:"course-3",
-            rating: 4.9,
-            price: 29.00,
-            lessons: 23,
-            students: 40,
-            weeks: 6
-        },
-        {
-            level: "Advanced",
-            img:"course-4",
-            title: "Java",
-            rating: 5.0,
-            price: 60.00,
-            lessons: 35,
-            students: 36,
-            weeks:5
-        },
-        {
-            level: "Advanced",
-            title: "C++",
-            img:"course-5",
-            rating: 5.0,
-            price: 39.00,
-            lessons: 6,
-            students: 34,
-            weeks:7
-        },
-    ]
   return (
     <>
-    {Items.map((item,index)=>(
+    {courses.map((item,index)=>(
         <li key={index}>
         <div className="course-card">
           <figure className="card-banner img-holder" style={{width: "100%", height: 220}}>
-            <Image src={`/images/${item.img}.jpg`} width="800" height="600" loading="lazy"
+            <Image src={urlForImage(item.mainImage)} width="800" height="600" loading="lazy"
               alt="The Complete Camtasia Course for Content Creators" className="img-cover" />
           </figure>
     
           <div className="abs-badge">
             <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
     
-            <span className="span">{item.weeks} weeks</span>
+            <span className="span">{item.duration} weeks</span>
           </div>
     
           <div className="card-content">
@@ -89,7 +38,7 @@ function Card() {
                 <ion-icon name="star"></ion-icon>
               </div>
     
-              <p className="rating-text">({item.rating} /7 Rating)</p>
+              <p className="rating-text">({item.rating} /5.0 Rating)</p>
     
             </div>
     
