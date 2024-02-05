@@ -5,6 +5,7 @@ import HomeC from "@/components/home/HomeC";
 export default async function Home() {
   const heroData = await getHeroData()
   const hero = heroData.hero[heroData.hero.length - 1];
+  console.log(heroData)
 // categories data
 const categoryData = await getCategoryData()
 // get about us data
