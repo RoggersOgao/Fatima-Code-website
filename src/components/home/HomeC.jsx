@@ -79,7 +79,7 @@ function HomeC({heroData, categoryData, aboutUs, courses, posts}) {
           <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <button className="header-action-btn" aria-label="cart" title="Cart" style={{display:"flex"}}>
+        <button className="header-action-btn" aria-label="donate" title="Cart" style={{display:"flex"}}>
         <BiSolidDonateHeart />
 
           {/* <span className="btn-badge">0</span> */}
