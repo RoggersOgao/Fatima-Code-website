@@ -183,7 +183,7 @@ function HomeC({heroData, categoryData, aboutUs, courses, posts}) {
           </h2>
 
           <p className="section-text">
-            Consectetur adipiscing elit sed do eiusmod tempor.
+          Navigating Virtual Education: A Guide to Online Classes for Remote Learning
           </p>
 
           <ul className="grid-list">

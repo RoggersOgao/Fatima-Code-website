@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
-import { sanityClient } from "../../../../sanity";
 import { NextResponse } from "next/server";
+import { client } from "../../../../sanity/lib/client";
 
 const query = groq`
 *[_type == "post"]{
@@ -9,7 +9,7 @@ const query = groq`
 }
 `
 export async function GET(request){
-    const post = await sanityClient.fetch(query)
+    const post = await client.fetch(query)
     return NextResponse.json({post}, {status:200})
 
 }
