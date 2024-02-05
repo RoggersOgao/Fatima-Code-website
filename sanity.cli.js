@@ -8,7 +8,7 @@ dotenv.config()
 
 import { defineCliConfig } from 'sanity/cli'
 
-const projectId = process.env.SANITY_PROJECT_ID
-const dataset = process.env.SANITY_DATASET
+const projectId = "86tqg9pt"
+const dataset = "development"
 
 export default defineCliConfig({ api: { projectId, dataset } })

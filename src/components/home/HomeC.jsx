@@ -3,10 +3,11 @@ import Image from "next/image"
 import Script from 'next/script'
 import Card from '../Card'
 import styles from "./HomeC.module.scss"
-import {FaPhone} from "react-icons/fa"
+import { FaPhone} from "react-icons/fa"
 import CategoryCard from './CategoryCard'
 import { urlForImage } from '../../../sanity/lib/image'
 import BlogCard from './BlogCard'
+import { BiSolidDonateHeart } from "react-icons/bi";
 
 
 const formatPhoneNumber = (originalNumber) => {
@@ -78,10 +79,10 @@ function HomeC({heroData, categoryData, aboutUs, courses, posts}) {
           <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <button className="header-action-btn" aria-label="cart" title="Cart">
-          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+        <button className="header-action-btn" aria-label="cart" title="Cart" style={{display:"flex"}}>
+        <BiSolidDonateHeart />
 
-          <span className="btn-badge">0</span>
+          {/* <span className="btn-badge">0</span> */}
         </button>
 
         <a href="#" className="btn has-before">
