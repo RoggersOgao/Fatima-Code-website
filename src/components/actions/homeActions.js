@@ -1,7 +1,5 @@
-export const revalidate = 30
-
 export async function getHeroData() {
-    const res = await fetch("https://fatima-code-website.vercel.app/api/getHero")
+    const res = await fetch("https://fatima-code-website.vercel.app/api/getHero", { next: { revalidate: 30 } })
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
    
@@ -16,7 +14,7 @@ export async function getHeroData() {
   // categories
 
   export async function getCategoryData() {
-    const res = await fetch("https://fatima-code-website.vercel.app/api/getCategory")
+    const res = await fetch("https://fatima-code-website.vercel.app/api/getCategory", { next: { revalidate: 30 } })
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
    
@@ -32,7 +30,7 @@ export async function getHeroData() {
    // about us
 
    export async function getAboutUsData() {
-    const res = await fetch("https://fatima-code-website.vercel.app/api/getAboutUs")
+    const res = await fetch("https://fatima-code-website.vercel.app/api/getAboutUs", { next: { revalidate: 30 } })
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
    
@@ -48,7 +46,7 @@ export async function getHeroData() {
      // courses
 
      export async function getCoursesData() {
-      const res = await fetch("https://fatima-code-website.vercel.app/api/getCourses")
+      const res = await fetch("https://fatima-code-website.vercel.app/api/getCourses", { next: { revalidate: 30 } })
       // The return value is *not* serialized
       // You can return Date, Map, Set, etc.
      
@@ -64,7 +62,7 @@ export async function getHeroData() {
      // posts
 
      export async function getPostsData() {
-      const res = await fetch("https://fatima-code-website.vercel.app/api/getPosts")
+      const res = await fetch("https://fatima-code-website.vercel.app/api/getPosts", { next: { revalidate: 30 } })
       // The return value is *not* serialized
       // You can return Date, Map, Set, etc.
      
