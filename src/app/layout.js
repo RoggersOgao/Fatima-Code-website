@@ -1,7 +1,7 @@
 import { League_Spartan } from "next/font/google";
 import "./globals.css";
 
-const leagueSpatan = League_Spartan({ subsets: ["latin"], display: 'swap', adjustFontFallback: false });
+const leagueSpatan = League_Spartan({ subsets: ["latin"]});
 
 export const metadata = {
   title: "Fatima Code",
