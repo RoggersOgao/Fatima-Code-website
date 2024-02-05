@@ -38,7 +38,7 @@ function BlogCard({ posts }) {
 
               <a href="#" className="card-subtitle">
                 
-            <p style={{display:"flex", gap:"10px"}}><span class="span">By:</span> {item.author?.name}</p>
+            <p style={{display:"flex", gap:"10px"}}><span className="span">By:</span> {item.author?.name}</p>
               </a>
 
               <h3 className="h3">
